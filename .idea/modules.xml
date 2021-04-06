@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.intuit.day02/com.intuit.day02.iml" filepath="$PROJECT_DIR$/com.intuit.day02/com.intuit.day02.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/functionalJava.iml" filepath="$PROJECT_DIR$/.idea/functionalJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day01/src.iml" filepath="$PROJECT_DIR$/Day01/src.iml" />
     </modules>

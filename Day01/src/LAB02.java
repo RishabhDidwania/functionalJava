@@ -16,18 +16,22 @@ public class LAB02 {
         String userName = "Rishabh";
         String pass = "39";
 
-        Predicate<String> notNull = value -> !value.isEmpty();
-        Predicate<String> uLengthValidation  =  value ->  value.length() >= 5 && value.length() <= 10;
-        Predicate<String> pLengthValidation  =  value ->  value.length() >= 3 && value.length() <= 8;
+//        Predicate<String> notNull = value -> !value.isEmpty();
+//        Predicate<String> uLengthValidation  =  value ->  value.length() >= 5 && value.length() <= 10;
+//        Predicate<String> pLengthValidation  =  value ->  value.length() >= 3 && value.length() <= 8;
 
         //username validation
-        System.out.println(notNull
-                .and(uLengthValidation)
+        System.out.println(ValidationConstants.notNull
+                .and(ValidationConstants.notEmpty)
+                .and(ValidationConstants.lengthGreaterThan(5))
+                .and(ValidationConstants.lengthLessThan(10))
                 .test(userName));
 
         //password validation
-        System.out.println(notNull
-                .and(pLengthValidation)
+        System.out.println(ValidationConstants.notNull
+                .and(ValidationConstants.notEmpty)
+                .and(ValidationConstants.lengthGreaterThan(3))
+                .and(ValidationConstants.lengthLessThan(8))
                 .test(pass));
     }
 }
